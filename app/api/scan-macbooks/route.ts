@@ -17,16 +17,17 @@ export async function POST() {
         // Simulate scanning different stores
         const stores = [
           'Allegro.pl',
-          'OLX.pl', 
+          'OLX.pl',
           'eBay.pl',
           'Amazon.pl',
-          'Ceneo.pl'
+          'Ceneo.pl',
+          'FB Marketplace'
         ];
 
         const results: any[] = [];
 
         for (const store of stores) {
-          log(`🔍 Scanning ${store}...`);
+          log(`🔍 Scanning ${store}${store === 'FB Marketplace' ? ' (Katowice area)' : ''}...`);
           await new Promise(resolve => setTimeout(resolve, 1500));
           
           // Simulate finding some listings
@@ -50,6 +51,7 @@ export async function POST() {
               'eBay.pl': `https://ebay.pl/itm/${slug}-${listingId}`,
               'Amazon.pl': `https://amazon.pl/dp/${slug}-${listingId}`,
               'Ceneo.pl': `https://ceneo.pl/oferta/${slug}-${listingId}`,
+              'FB Marketplace': `https://www.facebook.com/marketplace/katowice/item/${slug}-${listingId}`,
             };
 
             results.push({

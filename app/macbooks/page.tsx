@@ -26,6 +26,8 @@ const initialMacbooks: MacBook[] = [
   { model: 'MacBook Pro 14"', chip: 'M1 Pro', ram: '16GB', storage: '512GB', price: 5499, source: 'Allegro.pl', condition: 'Używany', url: 'https://allegro.pl/oferta/macbook-pro-14-m1-pro-16gb-512gb-5499' },
   { model: 'MacBook Pro 14"', chip: 'M2 Pro', ram: '16GB', storage: '512GB', price: 7299, source: 'eBay.pl', condition: 'Odnowiony', url: 'https://ebay.pl/itm/macbook-pro-14-m2-pro-16gb-512gb-7299' },
   { model: 'MacBook Pro 16"', chip: 'M2 Max', ram: '32GB', storage: '1TB', price: 9999, source: 'Allegro.pl', condition: 'Nowy', url: 'https://allegro.pl/oferta/macbook-pro-16-m2-max-32gb-1tb-9999' },
+  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 2199, source: 'FB Marketplace', condition: 'Używany', url: 'https://www.facebook.com/marketplace/katowice/item/macbook-air-m1-8gb-256gb-2199' },
+  { model: 'MacBook Pro 14"', chip: 'M1 Pro', ram: '16GB', storage: '512GB', price: 4899, source: 'FB Marketplace', condition: 'Używany', url: 'https://www.facebook.com/marketplace/katowice/item/macbook-pro-14-m1-pro-16gb-512gb-4899' },
 ];
 
 export default function MacBooks() {
@@ -211,7 +213,7 @@ export default function MacBooks() {
               marginBottom: '1.5rem',
               fontFamily: 'system-ui, -apple-system, sans-serif',
             }}>
-              Ceny z polskich sklepów: Allegro, OLX, eBay.pl, Amazon.pl
+              Ceny z polskich sklepów: Allegro, OLX, eBay.pl, Amazon.pl, FB Marketplace (Katowice)
             </p>
 
             {/* Scan button */}
