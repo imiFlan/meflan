@@ -77,6 +77,14 @@ export default function Home() {
             }}>
               About
             </a>
+            <a href="/macbooks" style={{
+              color: '#333',
+              textDecoration: 'none',
+              fontSize: '1.1rem',
+              fontWeight: '500',
+            }}>
+              MacBooks
+            </a>
           </div>
         </nav>
 
@@ -111,6 +119,14 @@ export default function Home() {
               padding: '0.5rem',
             }}>
               About
+            </a>
+            <a href="/macbooks" style={{
+              color: '#333',
+              textDecoration: 'none',
+              fontSize: '1.2rem',
+              padding: '0.5rem',
+            }}>
+              MacBooks
             </a>
           </div>
         )}
