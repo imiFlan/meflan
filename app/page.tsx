@@ -84,7 +84,7 @@ export default function Home() {
         {menuOpen && (
           <div style={{
             position: 'fixed',
-            top: '70px',
+            top: '66px',
             left: 0,
             right: 0,
             backgroundColor: 'rgba(255, 255, 255, 0.95)',
