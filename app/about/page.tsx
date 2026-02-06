@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function Home() {
+export default function About() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       backgroundAttachment: 'fixed',
       position: 'relative',
     }}>
-      {/* Overlay for better text readability */}
+      {/* Overlay */}
       <div style={{
         position: 'absolute',
         top: 0,
@@ -34,7 +34,6 @@ export default function Home() {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           backdropFilter: 'blur(10px)',
         }}>
-          {/* Mobile menu button (hamburger) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             style={{
@@ -56,7 +55,6 @@ export default function Home() {
             <span style={{ width: '24px', height: '3px', backgroundColor: 'white', display: 'block' }} />
           </button>
 
-          {/* Desktop nav links */}
           <div style={{
             display: 'flex',
             gap: '2rem',
@@ -80,7 +78,7 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Mobile menu dropdown */}
+        {/* Mobile menu */}
         {menuOpen && (
           <div style={{
             backgroundColor: 'rgba(0, 0, 0, 0.9)',
@@ -116,16 +114,30 @@ export default function Home() {
           minHeight: 'calc(100vh - 70px)',
           padding: '2rem',
         }}>
-          <h1 style={{
-            color: 'white',
-            fontSize: 'clamp(2rem, 8vw, 5rem)',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)',
-            fontFamily: 'system-ui, -apple-system, sans-serif',
+          <div style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            padding: '2rem',
+            borderRadius: '10px',
+            maxWidth: '600px',
           }}>
-            Hello Poland 🇵🇱
-          </h1>
+            <h1 style={{
+              color: 'white',
+              fontSize: '2.5rem',
+              fontWeight: 'bold',
+              marginBottom: '1rem',
+              fontFamily: 'system-ui, -apple-system, sans-serif',
+            }}>
+              About
+            </h1>
+            <p style={{
+              color: 'white',
+              fontSize: '1.2rem',
+              lineHeight: '1.6',
+              fontFamily: 'system-ui, -apple-system, sans-serif',
+            }}>
+              Welcome to meflan! This is our website dedicated to Poland.
+            </p>
+          </div>
         </div>
       </div>
     </div>
