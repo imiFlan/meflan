@@ -30,7 +30,7 @@ export default function About() {
           padding: '1rem',
           backgroundColor: 'rgba(255, 255, 255, 0.9)',
           backdropFilter: 'blur(10px)',
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+          boxShadow: menuOpen ? 'none' : '0 2px 10px rgba(0, 0, 0, 0.1)',
           zIndex: 1000,
         }}>
           <button
@@ -82,7 +82,7 @@ export default function About() {
         {menuOpen && (
           <div style={{
             position: 'fixed',
-            top: '66px',
+            top: '68px',
             left: 0,
             right: 0,
             backgroundColor: 'rgba(255, 255, 255, 0.95)',
@@ -90,7 +90,8 @@ export default function About() {
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
-            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+            boxShadow: 'none',
+            borderTop: 'none',
             zIndex: 999,
           }}>
             <a href="/" style={{
