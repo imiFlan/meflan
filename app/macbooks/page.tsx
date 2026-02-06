@@ -16,27 +16,14 @@ interface MacBook {
   url: string;
 }
 
-const macbooks: MacBook[] = [
-  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 399, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/b/MacBook-Air/111422/bn_339956' },
-  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 499, source: 'eBay', condition: 'Good', url: 'https://www.ebay.com/b/MacBook-Air/111422/bn_339956' },
-  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 599, source: 'Amazon', condition: 'Renewed', url: 'https://www.amazon.com/Macbook-Air-M1/s?k=Macbook+Air+M1' },
-  { model: 'MacBook Air 13"', chip: 'M1', ram: '16GB', storage: '256GB', price: 549, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/b/MacBook-Air/111422/bn_339956' },
-  { model: 'MacBook Air 13"', chip: 'M2', ram: '8GB', storage: '256GB', price: 549, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/shop/mac-air-m2?_nkw=mac+air+m2' },
-  { model: 'MacBook Air 13"', chip: 'M2', ram: '16GB', storage: '256GB', price: 679, source: 'Amazon', condition: 'Renewed', url: 'https://www.amazon.com/s?k=macbook+air+m2' },
-  { model: 'MacBook Air 13"', chip: 'M2', ram: '16GB', storage: '512GB', price: 749, source: 'Amazon', condition: 'New (Old Stock)', url: 'https://www.amazon.com/s?k=macbook+air+m2' },
-  { model: 'MacBook Air 15"', chip: 'M2', ram: '8GB', storage: '256GB', price: 699, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/shop/mac-air-m2?_nkw=mac+air+m2' },
-  { model: 'MacBook Air 15"', chip: 'M2', ram: '16GB', storage: '512GB', price: 899, source: 'Amazon', condition: 'Renewed', url: 'https://www.amazon.com/s?k=macbook+air+m2+15+inch' },
-  { model: 'MacBook Pro 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 449, source: 'eBay', condition: 'Good', url: 'https://www.ebay.com/b/Apple-MacBook-Pro/111422/bn_7116383' },
-  { model: 'MacBook Pro 13"', chip: 'M1', ram: '16GB', storage: '512GB', price: 599, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/b/Apple-MacBook-Pro/111422/bn_7116383' },
-  { model: 'MacBook Pro 13"', chip: 'M2', ram: '8GB', storage: '256GB', price: 699, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/itm/204034705059' },
-  { model: 'MacBook Pro 13"', chip: 'M2', ram: '16GB', storage: '512GB', price: 849, source: 'Amazon', condition: 'Renewed', url: 'https://www.amazon.com/s?k=macbook+pro+m2' },
-  { model: 'MacBook Pro 14"', chip: 'M1 Pro', ram: '16GB', storage: '512GB', price: 799, source: 'eBay', condition: 'Good', url: 'https://www.ebay.com/b/Apple-MacBook-Pro/111422/bn_7116383' },
-  { model: 'MacBook Pro 14"', chip: 'M2 Pro', ram: '16GB', storage: '512GB', price: 1099, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/b/Apple-MacBook-Pro/111422/bn_7116383' },
-  { model: 'MacBook Pro 14"', chip: 'M2 Pro', ram: '16GB', storage: '512GB', price: 1299, source: 'Amazon', condition: 'Renewed', url: 'https://www.amazon.com/s?k=macbook+pro+m2+pro' },
-  { model: 'MacBook Pro 16"', chip: 'M1 Pro', ram: '16GB', storage: '512GB', price: 899, source: 'eBay', condition: 'Good', url: 'https://www.ebay.com/b/Apple-MacBook-Pro/111422/bn_7116383' },
-  { model: 'MacBook Pro 16"', chip: 'M2 Pro', ram: '16GB', storage: '512GB', price: 1199, source: 'eBay', condition: 'Refurbished', url: 'https://www.ebay.com/b/Apple-MacBook-Pro/111422/bn_7116383' },
-  { model: 'MacBook Pro 16"', chip: 'M2 Max', ram: '32GB', storage: '1TB', price: 1599, source: 'eBay', condition: 'Good', url: 'https://www.ebay.com/b/Apple-MacBook-Pro/111422/bn_7116383' },
-  { model: 'MacBook Pro 16"', chip: 'M2 Max', ram: '32GB', storage: '1TB', price: 1799, source: 'Amazon', condition: 'Renewed', url: 'https://www.amazon.com/s?k=macbook+pro+m2+max' },
+const initialMacbooks: MacBook[] = [
+  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 2499, source: 'Allegro.pl', condition: 'Używany', url: 'https://allegro.pl' },
+  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 2899, source: 'OLX.pl', condition: 'Używany', url: 'https://olx.pl' },
+  { model: 'MacBook Air 13"', chip: 'M2', ram: '8GB', storage: '256GB', price: 3499, source: 'Allegro.pl', condition: 'Nowy', url: 'https://allegro.pl' },
+  { model: 'MacBook Air 13"', chip: 'M2', ram: '16GB', storage: '512GB', price: 4299, source: 'Amazon.pl', condition: 'Odnowiony', url: 'https://amazon.pl' },
+  { model: 'MacBook Pro 14"', chip: 'M1 Pro', ram: '16GB', storage: '512GB', price: 5499, source: 'Allegro.pl', condition: 'Używany', url: 'https://allegro.pl' },
+  { model: 'MacBook Pro 14"', chip: 'M2 Pro', ram: '16GB', storage: '512GB', price: 7299, source: 'eBay.pl', condition: 'Odnowiony', url: 'https://ebay.pl' },
+  { model: 'MacBook Pro 16"', chip: 'M2 Max', ram: '32GB', storage: '1TB', price: 9999, source: 'Allegro.pl', condition: 'Nowy', url: 'https://allegro.pl' },
 ];
 
 export default function MacBooks() {
@@ -44,6 +31,9 @@ export default function MacBooks() {
   const [sortKey, setSortKey] = useState<SortKey>('price');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
   const [chipFilter, setChipFilter] = useState<string>('all');
+  const [macbooks, setMacbooks] = useState<MacBook[]>(initialMacbooks);
+  const [scanning, setScanning] = useState(false);
+  const [logs, setLogs] = useState<string[]>([]);
 
   const chips = ['all', ...Array.from(new Set(macbooks.map(m => m.chip)))];
 
@@ -68,7 +58,51 @@ export default function MacBooks() {
 
   const sortIndicator = (key: SortKey) => {
     if (sortKey !== key) return '';
-    return sortDir === 'asc' ? ' \u25B2' : ' \u25BC';
+    return sortDir === 'asc' ? ' ▲' : ' ▼';
+  };
+
+  const handleScan = async () => {
+    setScanning(true);
+    setLogs([]);
+    
+    try {
+      const response = await fetch('/api/scan-macbooks', {
+        method: 'POST',
+      });
+
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+
+      if (!reader) return;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value);
+        const lines = chunk.split('\n');
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.slice(6));
+              if (data.log) {
+                setLogs(prev => [...prev, data.log]);
+              }
+              if (data.results) {
+                setMacbooks(data.results);
+              }
+            } catch (e) {
+              // Ignore parse errors
+            }
+          }
+        }
+      }
+    } catch (error) {
+      setLogs(prev => [...prev, `❌ Error: ${error}`]);
+    } finally {
+      setScanning(false);
+    }
   };
 
   return (
@@ -167,7 +201,7 @@ export default function MacBooks() {
               marginBottom: '0.5rem',
               fontFamily: 'system-ui, -apple-system, sans-serif',
             }}>
-              Cheapest MacBooks (M1 & M2)
+              Najtańsze MacBooki M1 i M2 🇵🇱
             </h1>
             <p style={{
               color: '#666',
@@ -175,12 +209,53 @@ export default function MacBooks() {
               marginBottom: '1.5rem',
               fontFamily: 'system-ui, -apple-system, sans-serif',
             }}>
-              Prices from Amazon and eBay. M1/M2 models are being phased out — grab them while stock lasts.
+              Ceny z polskich sklepów: Allegro, OLX, eBay.pl, Amazon.pl
             </p>
+
+            {/* Scan button */}
+            <button
+              onClick={handleScan}
+              disabled={scanning}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: scanning ? '#999' : '#0071e3',
+                color: 'white',
+                border: 'none',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                fontWeight: '600',
+                cursor: scanning ? 'not-allowed' : 'pointer',
+                marginBottom: '1rem',
+                fontFamily: 'system-ui, sans-serif',
+              }}
+            >
+              {scanning ? '🔄 Skanowanie...' : '🔍 Skanuj teraz'}
+            </button>
+
+            {/* Scan log */}
+            {logs.length > 0 && (
+              <div style={{
+                backgroundColor: '#f5f5f5',
+                border: '1px solid #ddd',
+                borderRadius: '8px',
+                padding: '1rem',
+                marginBottom: '1.5rem',
+                maxHeight: '200px',
+                overflowY: 'auto',
+                fontFamily: 'monospace',
+                fontSize: '0.85rem',
+              }}>
+                {logs.map((log, i) => (
+                  <div key={i} style={{ marginBottom: '0.25rem' }}>
+                    {log}
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Filter by chip */}
             <div style={{ marginBottom: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
-              <span style={{ color: '#555', fontSize: '0.9rem', fontWeight: '600', fontFamily: 'system-ui, sans-serif' }}>Filter by chip:</span>
+              <span style={{ color: '#555', fontSize: '0.9rem', fontWeight: '600', fontFamily: 'system-ui, sans-serif' }}>Filtruj według chipa:</span>
               {chips.map(chip => (
                 <button
                   key={chip}
@@ -197,7 +272,7 @@ export default function MacBooks() {
                     fontWeight: chipFilter === chip ? '600' : '400',
                   }}
                 >
-                  {chip === 'all' ? 'All' : chip}
+                  {chip === 'all' ? 'Wszystkie' : chip}
                 </button>
               ))}
             </div>
@@ -225,15 +300,15 @@ export default function MacBooks() {
                       Chip{sortIndicator('chip')}
                     </th>
                     <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>RAM</th>
-                    <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Storage</th>
+                    <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Dysk</th>
                     <th
                       onClick={() => handleSort('price')}
                       style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', cursor: 'pointer', userSelect: 'none', whiteSpace: 'nowrap' }}
                     >
-                      Price{sortIndicator('price')}
+                      Cena{sortIndicator('price')}
                     </th>
-                    <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Source</th>
-                    <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Condition</th>
+                    <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Sklep</th>
+                    <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Stan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -261,7 +336,7 @@ export default function MacBooks() {
                       </td>
                       <td style={{ padding: '0.75rem 0.5rem', color: '#555' }}>{mb.ram}</td>
                       <td style={{ padding: '0.75rem 0.5rem', color: '#555' }}>{mb.storage}</td>
-                      <td style={{ padding: '0.75rem 0.5rem', color: '#333', fontWeight: '700' }}>${mb.price}</td>
+                      <td style={{ padding: '0.75rem 0.5rem', color: '#333', fontWeight: '700' }}>{mb.price} zł</td>
                       <td style={{ padding: '0.75rem 0.5rem' }}>
                         <a
                           href={mb.url}
@@ -285,7 +360,7 @@ export default function MacBooks() {
               marginTop: '1.5rem',
               fontFamily: 'system-ui, sans-serif',
             }}>
-              Prices are approximate and may vary. Last checked February 2026.
+              Ceny są orientacyjne i mogą się różnić. Ostatnia aktualizacja: Luty 2026.
             </p>
           </div>
         </div>
