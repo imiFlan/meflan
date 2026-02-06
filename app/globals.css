@@ -1,0 +1,17 @@
+/* Desktop background (landscape) */
+.background-container {
+  min-height: 100vh;
+  background-image: url(/poland-background.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Mobile background (portrait) - for screens narrower than 768px */
+@media (max-width: 767px) {
+  .background-container {
+    background-image: url(/poland-background-mobile.jpg);
+  }
+}

@@ -6,15 +6,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      backgroundImage: 'url(/poland-background.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center top',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed',
-      position: 'relative',
-    }}>
+    <div className="background-container">
       {/* Light overlay for softer look */}
       <div style={{
         position: 'absolute',
