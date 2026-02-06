@@ -21,12 +21,17 @@ export default function Home() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* Navbar - Light theme */}
         <nav style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
           display: 'flex',
           alignItems: 'center',
           padding: '1rem',
           backgroundColor: 'rgba(255, 255, 255, 0.9)',
           backdropFilter: 'blur(10px)',
           boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+          zIndex: 1000,
         }}>
           {/* Mobile menu button (hamburger) */}
           <button
@@ -50,11 +55,12 @@ export default function Home() {
             <span style={{ width: '24px', height: '3px', backgroundColor: '#333', display: 'block' }} />
           </button>
 
-          {/* Desktop nav links */}
+          {/* Desktop nav links - hidden on mobile */}
           <div style={{
-            display: 'flex',
+            display: 'none',
             gap: '2rem',
-          }}>
+          }}
+          className="desktop-nav">
             <a href="/" style={{
               color: '#333',
               textDecoration: 'none',
@@ -77,12 +83,17 @@ export default function Home() {
         {/* Mobile menu dropdown */}
         {menuOpen && (
           <div style={{
+            position: 'fixed',
+            top: '70px',
+            left: 0,
+            right: 0,
             backgroundColor: 'rgba(255, 255, 255, 0.95)',
             padding: '1rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
             boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+            zIndex: 999,
           }}>
             <a href="/" style={{
               color: '#333',
@@ -108,7 +119,8 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          minHeight: 'calc(100vh - 70px)',
+          minHeight: '100vh',
+          paddingTop: '70px',
           padding: '2rem',
         }}>
           <h1 style={{
