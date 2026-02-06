@@ -35,15 +35,32 @@ export async function POST() {
           
           // Add mock results
           for (let i = 0; i < count; i++) {
+            const type = ['Air', 'Pro'][Math.floor(Math.random() * 2)];
+            const size = ['13"', '14"', '15"', '16"'][Math.floor(Math.random() * 4)];
+            const chip = ['M1', 'M2', 'M1 Pro', 'M2 Pro'][Math.floor(Math.random() * 4)];
+            const ram = ['8GB', '16GB', '32GB'][Math.floor(Math.random() * 3)];
+            const storage = ['256GB', '512GB', '1TB'][Math.floor(Math.random() * 3)];
+            const price = Math.floor(Math.random() * 6000) + 2000;
+            const listingId = Math.floor(Math.random() * 900000) + 100000;
+            const slug = `macbook-${type.toLowerCase()}-${chip.toLowerCase().replace(' ', '-')}-${ram.toLowerCase()}-${storage.toLowerCase()}`;
+
+            const storeUrls: Record<string, string> = {
+              'Allegro.pl': `https://allegro.pl/oferta/${slug}-${listingId}`,
+              'OLX.pl': `https://olx.pl/d/oferta/${slug}-${listingId}`,
+              'eBay.pl': `https://ebay.pl/itm/${slug}-${listingId}`,
+              'Amazon.pl': `https://amazon.pl/dp/${slug}-${listingId}`,
+              'Ceneo.pl': `https://ceneo.pl/oferta/${slug}-${listingId}`,
+            };
+
             results.push({
-              model: `MacBook ${['Air', 'Pro'][Math.floor(Math.random() * 2)]} ${['13"', '14"', '15"', '16"'][Math.floor(Math.random() * 4)]}`,
-              chip: ['M1', 'M2', 'M1 Pro', 'M2 Pro'][Math.floor(Math.random() * 4)],
-              ram: ['8GB', '16GB', '32GB'][Math.floor(Math.random() * 3)],
-              storage: ['256GB', '512GB', '1TB'][Math.floor(Math.random() * 3)],
-              price: Math.floor(Math.random() * 6000) + 2000,
+              model: `MacBook ${type} ${size}`,
+              chip,
+              ram,
+              storage,
+              price,
               source: store,
               condition: ['Nowy', 'Używany', 'Odnowiony'][Math.floor(Math.random() * 3)],
-              url: `https://${store.toLowerCase()}`
+              url: storeUrls[store] || `https://${store.toLowerCase()}/listing/${listingId}`
             });
           }
           

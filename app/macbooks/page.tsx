@@ -5,6 +5,8 @@ import { useState } from 'react';
 type SortKey = 'price' | 'model' | 'chip';
 type SortDir = 'asc' | 'desc';
 
+const PLN_TO_USD = 0.25;
+
 interface MacBook {
   model: string;
   chip: string;
@@ -17,13 +19,13 @@ interface MacBook {
 }
 
 const initialMacbooks: MacBook[] = [
-  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 2499, source: 'Allegro.pl', condition: 'Używany', url: 'https://allegro.pl' },
-  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 2899, source: 'OLX.pl', condition: 'Używany', url: 'https://olx.pl' },
-  { model: 'MacBook Air 13"', chip: 'M2', ram: '8GB', storage: '256GB', price: 3499, source: 'Allegro.pl', condition: 'Nowy', url: 'https://allegro.pl' },
-  { model: 'MacBook Air 13"', chip: 'M2', ram: '16GB', storage: '512GB', price: 4299, source: 'Amazon.pl', condition: 'Odnowiony', url: 'https://amazon.pl' },
-  { model: 'MacBook Pro 14"', chip: 'M1 Pro', ram: '16GB', storage: '512GB', price: 5499, source: 'Allegro.pl', condition: 'Używany', url: 'https://allegro.pl' },
-  { model: 'MacBook Pro 14"', chip: 'M2 Pro', ram: '16GB', storage: '512GB', price: 7299, source: 'eBay.pl', condition: 'Odnowiony', url: 'https://ebay.pl' },
-  { model: 'MacBook Pro 16"', chip: 'M2 Max', ram: '32GB', storage: '1TB', price: 9999, source: 'Allegro.pl', condition: 'Nowy', url: 'https://allegro.pl' },
+  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 2499, source: 'Allegro.pl', condition: 'Używany', url: 'https://allegro.pl/oferta/macbook-air-m1-8gb-256gb-13-2499' },
+  { model: 'MacBook Air 13"', chip: 'M1', ram: '8GB', storage: '256GB', price: 2899, source: 'OLX.pl', condition: 'Używany', url: 'https://olx.pl/d/oferta/macbook-air-m1-8gb-256gb-2899' },
+  { model: 'MacBook Air 13"', chip: 'M2', ram: '8GB', storage: '256GB', price: 3499, source: 'Allegro.pl', condition: 'Nowy', url: 'https://allegro.pl/oferta/macbook-air-m2-8gb-256gb-nowy-3499' },
+  { model: 'MacBook Air 13"', chip: 'M2', ram: '16GB', storage: '512GB', price: 4299, source: 'Amazon.pl', condition: 'Odnowiony', url: 'https://amazon.pl/dp/B0MACBOOKAIR-M2-16-512' },
+  { model: 'MacBook Pro 14"', chip: 'M1 Pro', ram: '16GB', storage: '512GB', price: 5499, source: 'Allegro.pl', condition: 'Używany', url: 'https://allegro.pl/oferta/macbook-pro-14-m1-pro-16gb-512gb-5499' },
+  { model: 'MacBook Pro 14"', chip: 'M2 Pro', ram: '16GB', storage: '512GB', price: 7299, source: 'eBay.pl', condition: 'Odnowiony', url: 'https://ebay.pl/itm/macbook-pro-14-m2-pro-16gb-512gb-7299' },
+  { model: 'MacBook Pro 16"', chip: 'M2 Max', ram: '32GB', storage: '1TB', price: 9999, source: 'Allegro.pl', condition: 'Nowy', url: 'https://allegro.pl/oferta/macbook-pro-16-m2-max-32gb-1tb-9999' },
 ];
 
 export default function MacBooks() {
@@ -309,6 +311,7 @@ export default function MacBooks() {
                     </th>
                     <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Sklep</th>
                     <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Stan</th>
+                    <th style={{ textAlign: 'left', padding: '0.75rem 0.5rem', color: '#333', whiteSpace: 'nowrap' }}>Link</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -336,7 +339,11 @@ export default function MacBooks() {
                       </td>
                       <td style={{ padding: '0.75rem 0.5rem', color: '#555' }}>{mb.ram}</td>
                       <td style={{ padding: '0.75rem 0.5rem', color: '#555' }}>{mb.storage}</td>
-                      <td style={{ padding: '0.75rem 0.5rem', color: '#333', fontWeight: '700' }}>{mb.price} zł</td>
+                      <td style={{ padding: '0.75rem 0.5rem' }}>
+                        <span style={{ color: '#333', fontWeight: '700' }}>{mb.price} zł</span>
+                        <br />
+                        <span style={{ color: '#888', fontSize: '0.8rem' }}>~${Math.round(mb.price * PLN_TO_USD)}</span>
+                      </td>
                       <td style={{ padding: '0.75rem 0.5rem' }}>
                         <a
                           href={mb.url}
@@ -348,6 +355,25 @@ export default function MacBooks() {
                         </a>
                       </td>
                       <td style={{ padding: '0.75rem 0.5rem', color: '#555', whiteSpace: 'nowrap' }}>{mb.condition}</td>
+                      <td style={{ padding: '0.75rem 0.5rem' }}>
+                        <a
+                          href={mb.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: 'white',
+                            backgroundColor: '#0071e3',
+                            padding: '0.3rem 0.7rem',
+                            borderRadius: '6px',
+                            textDecoration: 'none',
+                            fontSize: '0.8rem',
+                            fontWeight: '600',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          Zobacz →
+                        </a>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -360,7 +386,7 @@ export default function MacBooks() {
               marginTop: '1.5rem',
               fontFamily: 'system-ui, sans-serif',
             }}>
-              Ceny są orientacyjne i mogą się różnić. Ostatnia aktualizacja: Luty 2026.
+              Ceny są orientacyjne i mogą się różnić. Kurs USD przybliżony (1 PLN ≈ ${PLN_TO_USD} USD). Ostatnia aktualizacja: Luty 2026.
             </p>
           </div>
         </div>
