@@ -9,7 +9,7 @@ export default function About() {
     <div style={{
       minHeight: '100vh',
       backgroundImage: 'url(/poland-background.jpg)',
-      backgroundSize: 'contain',
+      backgroundSize: '100% 100%',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
