@@ -14,25 +14,26 @@ export default function Home() {
       backgroundAttachment: 'fixed',
       position: 'relative',
     }}>
-      {/* Overlay for better text readability */}
+      {/* Light overlay for softer look */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
       }} />
 
       {/* Content */}
       <div style={{ position: 'relative', zIndex: 1 }}>
-        {/* Navbar */}
+        {/* Navbar - Light theme */}
         <nav style={{
           display: 'flex',
           alignItems: 'center',
           padding: '1rem',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
           backdropFilter: 'blur(10px)',
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
         }}>
           {/* Mobile menu button (hamburger) */}
           <button
@@ -40,7 +41,7 @@ export default function Home() {
             style={{
               background: 'none',
               border: 'none',
-              color: 'white',
+              color: '#333',
               fontSize: '1.5rem',
               cursor: 'pointer',
               padding: '0.5rem',
@@ -51,9 +52,9 @@ export default function Home() {
             }}
             aria-label="Menu"
           >
-            <span style={{ width: '24px', height: '3px', backgroundColor: 'white', display: 'block' }} />
-            <span style={{ width: '24px', height: '3px', backgroundColor: 'white', display: 'block' }} />
-            <span style={{ width: '24px', height: '3px', backgroundColor: 'white', display: 'block' }} />
+            <span style={{ width: '24px', height: '3px', backgroundColor: '#333', display: 'block' }} />
+            <span style={{ width: '24px', height: '3px', backgroundColor: '#333', display: 'block' }} />
+            <span style={{ width: '24px', height: '3px', backgroundColor: '#333', display: 'block' }} />
           </button>
 
           {/* Desktop nav links */}
@@ -62,7 +63,7 @@ export default function Home() {
             gap: '2rem',
           }}>
             <a href="/" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.1rem',
               fontWeight: '500',
@@ -70,7 +71,7 @@ export default function Home() {
               Home
             </a>
             <a href="/about" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.1rem',
               fontWeight: '500',
@@ -83,14 +84,15 @@ export default function Home() {
         {/* Mobile menu dropdown */}
         {menuOpen && (
           <div style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
             padding: '1rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
+            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
           }}>
             <a href="/" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.2rem',
               padding: '0.5rem',
@@ -98,7 +100,7 @@ export default function Home() {
               Home
             </a>
             <a href="/about" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.2rem',
               padding: '0.5rem',
@@ -121,7 +123,7 @@ export default function Home() {
             fontSize: 'clamp(2rem, 8vw, 5rem)',
             fontWeight: 'bold',
             textAlign: 'center',
-            textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)',
+            textShadow: '3px 3px 10px rgba(0, 0, 0, 0.5)',
             fontFamily: 'system-ui, -apple-system, sans-serif',
           }}>
             Hello Poland 🇵🇱

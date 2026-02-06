@@ -14,32 +14,33 @@ export default function About() {
       backgroundAttachment: 'fixed',
       position: 'relative',
     }}>
-      {/* Overlay */}
+      {/* Light overlay */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
       }} />
 
       {/* Content */}
       <div style={{ position: 'relative', zIndex: 1 }}>
-        {/* Navbar */}
+        {/* Navbar - Light theme */}
         <nav style={{
           display: 'flex',
           alignItems: 'center',
           padding: '1rem',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
           backdropFilter: 'blur(10px)',
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
         }}>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             style={{
               background: 'none',
               border: 'none',
-              color: 'white',
+              color: '#333',
               fontSize: '1.5rem',
               cursor: 'pointer',
               padding: '0.5rem',
@@ -50,9 +51,9 @@ export default function About() {
             }}
             aria-label="Menu"
           >
-            <span style={{ width: '24px', height: '3px', backgroundColor: 'white', display: 'block' }} />
-            <span style={{ width: '24px', height: '3px', backgroundColor: 'white', display: 'block' }} />
-            <span style={{ width: '24px', height: '3px', backgroundColor: 'white', display: 'block' }} />
+            <span style={{ width: '24px', height: '3px', backgroundColor: '#333', display: 'block' }} />
+            <span style={{ width: '24px', height: '3px', backgroundColor: '#333', display: 'block' }} />
+            <span style={{ width: '24px', height: '3px', backgroundColor: '#333', display: 'block' }} />
           </button>
 
           <div style={{
@@ -60,7 +61,7 @@ export default function About() {
             gap: '2rem',
           }}>
             <a href="/" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.1rem',
               fontWeight: '500',
@@ -68,7 +69,7 @@ export default function About() {
               Home
             </a>
             <a href="/about" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.1rem',
               fontWeight: '500',
@@ -81,14 +82,15 @@ export default function About() {
         {/* Mobile menu */}
         {menuOpen && (
           <div style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
             padding: '1rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
+            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
           }}>
             <a href="/" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.2rem',
               padding: '0.5rem',
@@ -96,7 +98,7 @@ export default function About() {
               Home
             </a>
             <a href="/about" style={{
-              color: 'white',
+              color: '#333',
               textDecoration: 'none',
               fontSize: '1.2rem',
               padding: '0.5rem',
@@ -115,13 +117,14 @@ export default function About() {
           padding: '2rem',
         }}>
           <div style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
             padding: '2rem',
             borderRadius: '10px',
             maxWidth: '600px',
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
           }}>
             <h1 style={{
-              color: 'white',
+              color: '#333',
               fontSize: '2.5rem',
               fontWeight: 'bold',
               marginBottom: '1rem',
@@ -130,7 +133,7 @@ export default function About() {
               About
             </h1>
             <p style={{
-              color: 'white',
+              color: '#555',
               fontSize: '1.2rem',
               lineHeight: '1.6',
               fontFamily: 'system-ui, -apple-system, sans-serif',
